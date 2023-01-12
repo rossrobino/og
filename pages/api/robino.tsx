@@ -1,17 +1,17 @@
+/* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "@vercel/og";
-import { NextRequest } from "next/server";
 
 export const config = {
 	runtime: "edge",
 };
 
-const mansFont = fetch(
+const font = fetch(
 	new URL("../../assets/Mansalva-Regular.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
-export default async function handler(req: NextRequest) {
+export default async function handler() {
 	try {
-		const font = await mansFont;
+		const fontData = await font;
 
 		return new ImageResponse(
 			(
@@ -22,7 +22,7 @@ export default async function handler(req: NextRequest) {
 						borderWidth: 60,
 						borderColor: "#0E1317",
 					}}>
-					<div style={{ fontSize: 160, lineHeight: 1 }}>
+					<div style={{ fontSize: 170, lineHeight: .85 }}>
 						Ross Robino
 					</div>
 					<img
@@ -32,6 +32,7 @@ export default async function handler(req: NextRequest) {
 						style={{
 							borderRadius: 3,
 						}}
+						alt="A picture of Ross Robino"
 					/>
 				</div>
 			),
@@ -41,7 +42,7 @@ export default async function handler(req: NextRequest) {
 				fonts: [
 					{
 						name: "mansalva",
-						data: font,
+						data: fontData,
 					},
 				],
 			}
