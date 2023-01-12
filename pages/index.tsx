@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 export default function Home() {
 	return (
 		<>
@@ -17,13 +18,16 @@ export default function Home() {
 					meta tag.
 				</p>
 				<h2>Images & Search Params</h2>
-				<p>Use search params by adding ? at the end of the url and separating with &.</p>
+				<p>
+					Use search params by adding ? at the end of the url and
+					separating with &.
+				</p>
 				<ul>
 					<li>
-						<a href="/api/robino">robino</a>
+						<Link href="/api/robino">robino</Link>
 					</li>
 					<li>
-						<a href="/api/blog">blog</a>
+						<Link href="/api/blog">blog</Link>
 					</li>
 					<ul>
 						<li>title</li>
