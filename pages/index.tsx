@@ -4,24 +4,27 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>rossrobino/og</title>
+				<title>og.robino.dev</title>
 				<meta name="description" content="og image api" />
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1"
 				/>
 			</Head>
+			<header>
+				<h1>og.robino.dev</h1>
+			</header>
 			<main>
-				<h1>rossrobino/og</h1>
+				<hr />
+				<h2>Use</h2>
 				<p>
-					Navigate to the url and copy the link to into an og:image
-					meta tag.
+					<code>
+						&lt;meta property=&quot;og:image&quot;
+						content=&quot;https://og.robino.dev/api/route?param=argument&...&quot;
+						/&gt;
+					</code>
 				</p>
-				<h2>Images & Search Params</h2>
-				<p>
-					Use search params by adding ? at the end of the url and
-					separating with &.
-				</p>
+				<h2>Routes & Parameters</h2>
 				<ul>
 					<li>
 						<Link href="/api/robino">robino</Link>
@@ -35,7 +38,11 @@ export default function Home() {
 						<li>author</li>
 					</ul>
 				</ul>
+				<hr />
 			</main>
+			<footer>
+				<Link href="https://github.com/rossrobino/og">GitHub</Link>
+			</footer>
 		</>
 	);
 }
