@@ -16,8 +16,8 @@ export default async function handler(req: NextRequest) {
 		return new ImageResponse(
 			(
 				<div
-					tw="w-full h-full p-18 flex items-center justify-between bg-slate-50"
-					style={{ color: "#0E1317", borderWidth: 20, borderColor: "#0E1317" }}>
+					tw="w-full h-full p-14 flex items-center justify-between bg-slate-50"
+					style={{ color: "#0E1317", borderWidth: 40, borderColor: "#0E1317" }}>
 					<h1 tw="text-9xl">Ross Robino</h1>
 					<img
 						width="300"
